@@ -402,7 +402,7 @@
  			<key>detail</key>
  			<string>PCKContributorsSubPreferencesListController</string>
  			<key>PCKSub</key>
- 			<string>contributorsSub</string>
+ 			<string>sub/contributors</string>
  		</dict>
 
 		<dict>
@@ -419,7 +419,7 @@
 			<key>subtitle</key>
 			<string>3D touch menu color based on app icon</string>
 			<key>icon</key>
-			<string>Koi.png</string>
+			<string>featured/Koi.png</string>
 			<key>url</key>
 			<string>https://repo.litten.love/depictions/koi/</string>
 		</dict>
@@ -431,7 +431,7 @@
 			<key>subtitle</key>
 			<string>Little colors flying around everywhere</string>
 			<key>icon</key>
-			<string>Butterfly.png</string>
+			<string>featured/Butterfly.png</string>
 			<key>url</key>
 			<string>https://repo.litten.love/depictions/bty/</string>
 		</dict>
