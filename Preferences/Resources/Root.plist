@@ -122,10 +122,6 @@
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>Warning Notification</string>
-			<key>footerText</key>
-			<string>Does not work while do not disturb is enabled</string>
-			<key>isStaticText</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>cell</key>
