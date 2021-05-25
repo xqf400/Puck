@@ -27,6 +27,7 @@ BOOL toggleWarningSwitch = NO;
 // warning notification
 BOOL warningNotificationSwitch = YES;
 NSString* warningPercentageValue = @"10";
+BOOL hideLowPowerAlertSwitch = YES;
 
 // airplane
 BOOL toggleAirplaneModeSwitch = YES;

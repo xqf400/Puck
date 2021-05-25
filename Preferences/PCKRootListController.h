@@ -4,6 +4,7 @@
 #import <CepheiPrefs/HBAppearanceSettings.h>
 #import <Cephei/HBPreferences.h>
 #import <Cephei/HBRespringController.h>
+#import "WelcomeViewController.h"
 
 @interface PCKAppearanceSettings : HBAppearanceSettings
 @end
@@ -24,5 +25,4 @@
 - (void)resetPrompt;
 - (void)resetPreferences;
 - (void)respring;
-- (void)activate:(id)sender;
 @end

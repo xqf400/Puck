@@ -7,7 +7,7 @@
 @interface PCKAppearanceSettings : HBAppearanceSettings
 @end
 
-@interface PCKContributorsSubPrefsListController : HBListController
+@interface PCKContributorsSubPreferencesListController : HBListController
 @property(nonatomic, retain)PCKAppearanceSettings* appearanceSettings;
 @property(nonatomic, retain)UILabel* titleLabel;
 @property(nonatomic, retain)UIBlurEffect* blur;

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>PuckPrefs</string>
+	<string>PuckPreferences</string>
 	<key>CFBundleIdentifier</key>
 	<string>love.litten.puckpreferences</string>
 	<key>CFBundleInfoDictionaryVersion</key>

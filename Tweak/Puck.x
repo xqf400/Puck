@@ -392,6 +392,19 @@ void PuckActivatorWake() {
 
 %end
 
+%hook SBLowPowerAlertItem
+
++ (void)initialize { // hide low power alert
+
+	if (hideLowPowerAlertSwitch)
+		return;
+	else
+		%orig;
+
+}
+
+%end
+
 %hook SpringBoard
 
 - (void)applicationDidFinishLaunching:(id)arg1 { // register puck notifications
@@ -601,6 +614,7 @@ void PuckActivatorWake() {
 	// warning notification
 	[preferences registerBool:&warningNotificationSwitch default:YES forKey:@"warningNotification"];
 	[preferences registerObject:&warningPercentageValue default:@"10" forKey:@"warningPercentage"];
+	[preferences registerBool:&hideLowPowerAlertSwitch default:YES forKey:@"hideLowPowerAlert"];
 
 	// airplane
 	[preferences registerBool:&toggleAirplaneModeSwitch default:YES forKey:@"toggleAirplaneMode"];

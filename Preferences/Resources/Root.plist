@@ -53,8 +53,6 @@
 			<true/>
 			<key>isSegmented</key>
 			<true/>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -79,8 +77,6 @@
 			<true/>
 			<key>isSegmented</key>
 			<true/>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -93,8 +89,6 @@
 			<string>wakeWithVolumeButton</string>
 			<key>label</key>
 			<string>Wake with volume up button</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -107,8 +101,6 @@
 			<string>wakeWhenPluggedIn</string>
 			<key>label</key>
 			<string>Wake when plugged in</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -122,7 +114,7 @@
 			<key>label</key>
 			<string>Toggle warning</string>
 			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
+			<string>love.litten.puckpreferences/</string>
 		</dict>
 
 		<dict>
@@ -146,8 +138,6 @@
 			<string>warningNotification</string>
 			<key>label</key>
 			<string>Show warning notification</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -172,8 +162,18 @@
 			<true/>
 			<key>isSegmented</key>
 			<true/>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>love.litten.puckpreferences</string>
+			<key>key</key>
+			<string>hideLowPowerAlert</string>
+			<key>label</key>
+			<string>Hide low power alert</string>
 		</dict>
 
 		<dict>
@@ -193,8 +193,6 @@
 			<string>toggleAirplaneMode</string>
 			<key>label</key>
 			<string>Toggle airplane mode</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 
 		<dict>
@@ -214,8 +212,6 @@
 			<string>killAllApps</string>
 			<key>label</key>
 			<string>Kill all apps</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -228,8 +224,6 @@
 			<string>ignoreNowPlayingApp</string>
 			<key>label</key>
 			<string>Ignore now playing app</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		
 		<dict>
@@ -253,8 +247,6 @@
 			<string>allowMusicPlayback</string>
 			<key>label</key>
 			<string>Allow music playback</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -267,8 +259,6 @@
 			<string>allowVolumeChanges</string>
 			<key>label</key>
 			<string>Allow volume changes</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 
 		<dict>
@@ -288,8 +278,6 @@
 			<string>allowCalls</string>
 			<key>label</key>
 			<string>Don't shutdown during a call</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -302,8 +290,6 @@
 			<string>shutdownAfterCallEnded</string>
 			<key>label</key>
 			<string>Shutdown after a call ended</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 
 		<dict>
@@ -323,8 +309,6 @@
 			<string>wakeWhenAlarmFires</string>
 			<key>label</key>
 			<string>Wake when alarm fires</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		
 		<dict>
@@ -344,8 +328,6 @@
 			<string>turnFlashlightOff</string>
 			<key>label</key>
 			<string>Turn flashlight off</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 
 		<dict>
@@ -365,8 +347,6 @@
 			<string>toggleFlashlight</string>
 			<key>label</key>
 			<string>Toggle flashlight</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -379,8 +359,6 @@
 			<string>playPauseMedia</string>
 			<key>label</key>
 			<string>Play/Pause media</string>
-			<key>PostNotification</key>
-			<string>love.litten.puckpreferences/ReloadPrefs</string>
 		</dict>
 
 		<dict>
@@ -426,7 +404,7 @@
  			<key>label</key>
  			<string>Contributors</string>
  			<key>detail</key>
- 			<string>PCKContributorsSubPrefsListController</string>
+ 			<string>PCKContributorsSubPreferencesListController</string>
  			<key>PCKSub</key>
  			<string>contributorsSub</string>
  		</dict>

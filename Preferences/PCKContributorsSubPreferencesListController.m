@@ -1,6 +1,6 @@
-#import "PCKContributorsSubPrefsListController.h"
+#import "PCKContributorsSubPreferencesListController.h"
 
-@implementation PCKContributorsSubPrefsListController
+@implementation PCKContributorsSubPreferencesListController
 
 - (void)viewDidLoad {
 
@@ -19,11 +19,11 @@
     [super viewWillAppear:animated];
 
     [[self blurView] setFrame:[[self view] bounds]];
-    [[self blurView] setAlpha:1.0];
+    [[self blurView] setAlpha:1];
     [[self view] addSubview:[self blurView]];
 
-    [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        [[self blurView] setAlpha:0.0];
+    [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [[self blurView] setAlpha:0];
     } completion:nil];
 
 }
@@ -50,6 +50,12 @@
 
     [self loadFromSpecifier:specifier];
     [super setSpecifier:specifier];
+
+}
+
+- (BOOL)shouldReloadSpecifiersOnResume {
+
+    return false;
 
 }
 
