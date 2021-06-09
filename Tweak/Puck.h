@@ -16,6 +16,7 @@ NSTimer* timer = nil;
 int volumeUpPresses = 0;
 BOOL deviceHasFlashlight = NO;
 BOOL flashLightAvailable = NO;
+int previousLowPowerModeState = 0;
 
 // behavior
 NSString* shutdownPercentageValue = @"7";
@@ -70,6 +71,7 @@ BOOL playPauseMediaSwitch = NO;
 
 @interface _CDBatterySaver : NSObject
 + (id)sharedInstance;
+- (long long)getPowerMode;
 - (BOOL)setPowerMode:(long long)arg1 error:(id *)arg2;
 @end
 

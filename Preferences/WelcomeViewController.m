@@ -6,13 +6,9 @@
 
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor systemBackgroundColor]];
-    [self setModalInPresentation:YES];
 
 
-    self.preferences = [[HBPreferences alloc] initWithIdentifier:@"love.litten.puckpreferences"];
-
-
-    NSData* inData = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:@"/Library/PreferenceBundles/PuckPreferences.bundle/welcome/Circle Of Love.ttf"]];
+    NSData* inData = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:@"/Library/PreferenceBundles/DiaryPreferences.bundle/welcome/Circle Of Love.ttf"]];
     CFErrorRef error;
     CGDataProviderRef provider = CGDataProviderCreateWithCFData((CFDataRef)inData);
     CGFontRef font = CGFontCreateWithDataProvider(provider);
@@ -27,7 +23,7 @@
     // header
     self.headerImageView = [UIImageView new];
     [[self headerImageView] setContentMode:UIViewContentModeScaleAspectFill];
-    [[self headerImageView] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/PuckPreferences.bundle/welcome/header.png"]];
+    [[self headerImageView] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/DiaryPreferences.bundle/welcome/header.png"]];
     [[self view] addSubview:[self headerImageView]];
 
     [[self headerImageView] setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -94,7 +90,7 @@
     self.twitterCellIcon = [UIButton new];
     [[self twitterCellIcon] addTarget:self action:@selector(openTwitterURL) forControlEvents:UIControlEventTouchUpInside];
     [[self twitterCellIcon] setContentMode:UIViewContentModeScaleAspectFill];
-    [[self twitterCellIcon] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/PuckPreferences.bundle/welcome/twitter.png"] forState:UIControlStateNormal];
+    [[self twitterCellIcon] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/DiaryPreferences.bundle/welcome/twitter.png"] forState:UIControlStateNormal];
     [[self twitterCellIcon] setClipsToBounds:YES];
     [[[self twitterCellIcon] layer] setCornerRadius:10];
     [[[self twitterCellIcon] layer] setBorderColor:[[UIColor colorWithRed:0.93 green:0.76 blue:1 alpha:1] CGColor]];
@@ -146,7 +142,7 @@
     self.githubCellIcon = [UIButton new];
     [[self githubCellIcon] addTarget:self action:@selector(openGitHubURL) forControlEvents:UIControlEventTouchUpInside];
     [[self githubCellIcon] setContentMode:UIViewContentModeScaleAspectFill];
-    [[self githubCellIcon] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/PuckPreferences.bundle/welcome/github.png"] forState:UIControlStateNormal];
+    [[self githubCellIcon] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/DiaryPreferences.bundle/welcome/github.png"] forState:UIControlStateNormal];
     [[self githubCellIcon] setClipsToBounds:YES];
     [[[self githubCellIcon] layer] setCornerRadius:10];
     [[[self githubCellIcon] layer] setBorderColor:[[UIColor colorWithRed:0.84 green:0.89 blue:1 alpha:1] CGColor]];
@@ -198,7 +194,7 @@
     self.discordCellIcon = [UIButton new];
     [[self discordCellIcon] addTarget:self action:@selector(openDiscordURL) forControlEvents:UIControlEventTouchUpInside];
     [[self discordCellIcon] setContentMode:UIViewContentModeScaleAspectFill];
-    [[self discordCellIcon] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/PuckPreferences.bundle/welcome/discord.png"] forState:UIControlStateNormal];
+    [[self discordCellIcon] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/DiaryPreferences.bundle/welcome/discord.png"] forState:UIControlStateNormal];
     [[self discordCellIcon] setClipsToBounds:YES];
     [[[self discordCellIcon] layer] setCornerRadius:10];
     [[[self discordCellIcon] layer] setBorderColor:[[UIColor colorWithRed:0.58 green:0.66 blue:0.71 alpha:1] CGColor]];
@@ -245,26 +241,6 @@
     ]];
     
     
-    // dismiss button
-    self.dismissButton = [UIButton new];
-    [[self dismissButton] addTarget:self action:@selector(dismissWelcomeViewController) forControlEvents:UIControlEventTouchUpInside];
-    [[self dismissButton] setBackgroundColor:[UIColor colorWithRed:1 green:0.47 blue:0.60 alpha:1]];
-    [[self dismissButton] setClipsToBounds:YES];
-    [[[self dismissButton] layer] setCornerRadius:8];
-    [[self dismissButton] setTitle:@"Dismiss" forState:UIControlStateNormal];
-    [[[self dismissButton] titleLabel] setFont:[UIFont systemFontOfSize:21 weight:UIFontWeightMedium]];
-    [[[self dismissButton] titleLabel] setTextColor:[UIColor labelColor]];
-    [[self dragView] addSubview:[self dismissButton]];
-    
-    [[self dismissButton] setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [NSLayoutConstraint activateConstraints:@[
-        [self.dismissButton.bottomAnchor constraintEqualToAnchor:self.dragView.bottomAnchor constant:-40],
-        [self.dismissButton.leadingAnchor constraintEqualToAnchor:self.dragView.leadingAnchor constant:32],
-        [self.dismissButton.trailingAnchor constraintEqualToAnchor:self.dragView.trailingAnchor constant:-32],
-        [self.dismissButton.heightAnchor constraintEqualToConstant:55],
-    ]];
-    
-    
     // hint label
     self.hintLabel = [UILabel new];
     [[self hintLabel] setText:@"You can always access\n these links inside the preferences"];
@@ -276,7 +252,7 @@
 
     [[self hintLabel] setTranslatesAutoresizingMaskIntoConstraints:NO];
     [NSLayoutConstraint activateConstraints:@[
-        [self.hintLabel.bottomAnchor constraintEqualToAnchor:self.dismissButton.topAnchor constant:-12],
+        [self.hintLabel.bottomAnchor constraintEqualToAnchor:self.dragView.bottomAnchor constant:-32],
         [self.hintLabel.leadingAnchor constraintEqualToAnchor:self.dragView.leadingAnchor constant:32],
         [self.hintLabel.trailingAnchor constraintEqualToAnchor:self.dragView.trailingAnchor constant:-32],
     ]];
@@ -325,13 +301,6 @@
 - (void)openDiscordURL {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://discord.gg/fPHN8KG"] options:@{} completionHandler:nil];
-    
-}
-
-- (void)dismissWelcomeViewController {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [[self preferences] setBool:YES forKey:@"wasWelcomed"];
     
 }
 

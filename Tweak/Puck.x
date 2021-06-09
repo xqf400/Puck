@@ -470,6 +470,7 @@ void PuckActivatorWake() {
 	if (toggleAirplaneModeSwitch) [[%c(SBAirplaneModeController) sharedInstance] setInAirplaneMode:YES];
 
 	// enable low power mode
+	previousLowPowerModeState = [[%c(_CDBatterySaver) sharedInstance] getPowerMode];
 	[[%c(_CDBatterySaver) sharedInstance] setPowerMode:1 error:nil];
 
 	// enable do not disturb
@@ -522,7 +523,7 @@ void PuckActivatorWake() {
 	if (toggleAirplaneModeSwitch) [[%c(SBAirplaneModeController) sharedInstance] setInAirplaneMode:NO];
 
 	// disable low power mode
-	[[%c(_CDBatterySaver) sharedInstance] setPowerMode:0 error:nil];
+	if (previousLowPowerModeState == 0) [[%c(_CDBatterySaver) sharedInstance] setPowerMode:0 error:nil];
 
 	// disable do not disturb
 	DNDModeAssertionService* assertionService = (DNDModeAssertionService *)[objc_getClass("DNDModeAssertionService") serviceForClientIdentifier:@"com.apple.donotdisturb.control-center.module"];
@@ -548,7 +549,7 @@ void PuckActivatorWake() {
 	if (toggleAirplaneModeSwitch) [[%c(SBAirplaneModeController) sharedInstance] setInAirplaneMode:NO];
 
 	// disable low power mode
-	[[%c(_CDBatterySaver) sharedInstance] setPowerMode:0 error:nil];
+	if (previousLowPowerModeState == 0) [[%c(_CDBatterySaver) sharedInstance] setPowerMode:0 error:nil];
 
 	// disable do not disturb
 	DNDModeAssertionService* assertionService = (DNDModeAssertionService *)[objc_getClass("DNDModeAssertionService") serviceForClientIdentifier:@"com.apple.donotdisturb.control-center.module"];
