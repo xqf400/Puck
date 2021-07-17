@@ -26,7 +26,7 @@
     self.navigationItem.titleView = [UIView new];
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     [[self titleLabel] setFont:[UIFont boldSystemFontOfSize:17]];
-    [[self titleLabel] setText:@"2.0.1"];
+    [[self titleLabel] setText:@"2.0.2"];
     [[self titleLabel] setTextColor:[UIColor whiteColor]];
     [[self titleLabel] setTextAlignment:NSTextAlignmentCenter];
     [[[self navigationItem] titleView] addSubview:[self titleLabel]];
@@ -196,6 +196,12 @@
         [[self enableSwitch] setOn:YES animated:YES];
     else
         [[self enableSwitch] setOn:NO animated:YES];
+
+}
+
+- (void)activate:(id)sender {
+
+    CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), (CFStringRef)@"love.litten.puck/PreferencesShutdown", nil, nil, true);
 
 }
 
