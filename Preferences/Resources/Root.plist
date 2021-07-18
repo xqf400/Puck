@@ -421,7 +421,7 @@
 			<key>icon</key>
 			<string>featured/Koi.png</string>
 			<key>url</key>
-			<string>https://repo.litten.love/depictions/koi/</string>
+			<string>https://repo.litten.love/depictions/Koi/</string>
 		</dict>
 		<dict>
 			<key>cellClass</key>
@@ -433,7 +433,7 @@
 			<key>icon</key>
 			<string>featured/Butterfly.png</string>
 			<key>url</key>
-			<string>https://repo.litten.love/depictions/bty/</string>
+			<string>https://repo.litten.love/depictions/Butterfly/</string>
 		</dict>
 
 		<dict>
