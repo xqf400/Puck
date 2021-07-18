@@ -1,7 +1,7 @@
 Package: love.litten.puck
 Name: Puck 🔮
 Depends: mobilesubstrate, preferenceloader, ws.hbang.common (>= 1.14), firmware (>= 13.0), com.opa334.ccsupport
-Version: 2.0.2
+Version: 2.0.3
 Architecture: iphoneos-arm
 Description: Your magical watching spirit
 Maintainer: Litten
@@ -9,4 +9,4 @@ Author: Litten
 Section: Tweaks
 Depiction: https://repo.litten.love/depictions/Puck/index.html
 SileoDepiction: https://repo.litten.love/depictions/Puck/index.json
-Icon: https://repo.litten.love/depictions/pck/assets/icon.png
+Icon: https://repo.litten.love/depictions/Puck/assets/icon.png
