@@ -1,4 +1,4 @@
-# Puck
+# Puck 🔮
 Your magical watching spirit
 
 ## Installation
