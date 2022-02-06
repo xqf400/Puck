@@ -1,5 +1,5 @@
 # Puck 🔮
-Your magical watching spirit
+Prevent the need of rejailbreaking
 
 ## Installation
 1. Add this repository to your package manager: `TBD`
